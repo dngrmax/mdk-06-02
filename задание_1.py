@@ -11,10 +11,12 @@ def read_positive(prompt):
     return value
 
 
-def main():
+def main(num: int = 10):
     lam = read_positive("Интенсивность поступления заявок λ: ")
     mu = read_positive("Интенсивность обслуживания μ: ", end="\n\n")
-
+    print(num)
+    print(lam)
+    print(mu)
     rho = lam / mu  # нагрузка на систему
     p0 = 1 / (1 + rho)  # канал свободен
     p1 = rho / (1 + rho)  # канал занят
@@ -22,11 +24,11 @@ def main():
     q = 1 - p_refusal  # доля обслуженных заявок
     a = lam * q  # число обслуженных заявок за единицу времени
 
-    print("Одноканальная СМО с отказами M/M/1:0")
-    print(f"Нагрузка ρ: {rho:.4f}", end="\n\n")
+    print("Одноканальная смо с отказами M/M/1:0")
+    print(f"Загрузка ρ: {rho:.4f}", end="\n\n")
 
     print("Состояние            Вероятность")
-    print(f"S0: канал свободен    {p0:.4f}")
+    print(f"с0: канал свободен    {p0:.4f}")
     print(f"S1: канал занят       {p1:.4f}", end="\n\n")
     
     print(f"Вероятность отказа Pотк: {p_refusal:.4f}")
@@ -47,12 +49,3 @@ if __name__ == "__main__":
         main()
     except ValueError as error:
         print(f"Ошибка ввода: {error}")
-
-
-
-олвыылылиы
-
-        Изменение в файле задание 1.!!!!!...!!...!!!!!!!
-        
-        укш
-        уьулту
