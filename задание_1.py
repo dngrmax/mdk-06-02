@@ -11,10 +11,12 @@ def read_positive(prompt):
     return value
 
 
-def main():
+def main(num: int = 10):
     lam = read_positive("Интенсивность поступления заявок λ: ")
     mu = read_positive("Интенсивность обслуживания μ: ", end="\n\n")
-
+    print(num)
+    print(lam)
+    print(mu)
     rho = lam / mu  # нагрузка на систему
     p0 = 1 / (1 + rho)  # канал свободен
     p1 = rho / (1 + rho)  # канал занят
@@ -47,12 +49,3 @@ if __name__ == "__main__":
         main()
     except ValueError as error:
         print(f"Ошибка ввода: {error}")
-
-
-
-олвыылылиы
-
-        Изменение в файле задание 1.!!!!!...!!...!!!!!!!
-        
-        укш
-        уьулту
