@@ -47,3 +47,7 @@ if __name__ == "__main__":
         main()
     except ValueError as error:
         print(f"Ошибка ввода: {error}")
+
+
+
+олвыылылиы
